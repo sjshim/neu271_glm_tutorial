@@ -2,7 +2,7 @@
 
 ## Set up
 1. Install miniconda: https://docs.conda.io/en/latest/miniconda.html
-2. Create new conda environment: conda create -n brainhack
+2. Create new conda environment: conda create -n glm-tutorial
 3. Install python: conda install python
 4. Install nilearn: pip install nilearn
 5. Install jupyter: pip install jupyter
