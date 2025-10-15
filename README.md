@@ -2,7 +2,7 @@
 
 ## Set up
 1. Install miniconda: https://docs.conda.io/en/latest/miniconda.html
-2. Create new conda environment: conda create -n glm-tutorial
+2. Create new conda environment: conda create -n glm-tutorial and activate
 3. Install python: conda install python=3.12
 4. Install nilearn: python -m pip install nilearn
 5. Install jupyter: python -m pip install jupyter
