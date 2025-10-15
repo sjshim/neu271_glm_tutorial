@@ -3,10 +3,12 @@
 ## Set up
 1. Install miniconda: https://docs.conda.io/en/latest/miniconda.html
 2. Create new conda environment: conda create -n glm-tutorial
-3. Install python: conda install python
-4. Install nilearn: pip install nilearn
-5. Install jupyter: pip install jupyter
-6. Install datalad and datalad-container: https://handbook.datalad.org/en/latest/intro/installation.html#install & pip install datalad-container
+3. Install python: conda install python=3.12
+4. Install nilearn: python -m pip install nilearn
+5. Install jupyter: python -m pip install jupyter
+6. Install matplotlib: python -m pip install matplotlib
+7. Install datalad and datalad-container: conda install -c conda-forge datalad & python -m pip install datalad-container \
+https://handbook.datalad.org/en/latest/intro/installation.html#install 
 
 ## General Linear Model Analysis
 Useful resources:
