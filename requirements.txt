@@ -1,0 +1,4 @@
+nilearn
+jupyter
+matplotlib
+datalad
