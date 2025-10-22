@@ -8,7 +8,26 @@
 5. Install jupyter: python -m pip install jupyter
 6. Install matplotlib: python -m pip install matplotlib
 7. Install datalad and datalad-container: conda install -c conda-forge datalad & python -m pip install datalad-container \
-https://handbook.datalad.org/en/latest/intro/installation.html#install 
+https://handbook.datalad.org/en/latest/intro/installation.html#install
+
+## Set up with Docker
+1. Install docker: https://www.docker.com/products/docker-desktop/
+2. Clone the github repository and run the shell script to build the docker image and create the container environment.
+```shell
+git clone https://github.com/sjshim/neu271_glm_tutorial.git
+cd neu271_glm_tutorial
+chmod +x create_docker.sh
+./create_docker.sh --git_user_name YOUR_USERNAME --git_user_email YOUR_USEREMAIL
+```
+Adding --git_user_name and --git_user_email details is required to download data using datalad. Running the shellscript create a new docker image in each user's local system, and it may take 10 ~ 15 minutes. This is why we don't use pre-built docker image, since then the git config in the image will be set with someone's info.
+
+3. On terminal, you may find jupyter server is created. Click the link and open the Jupyter server.
+4. Run fMRI_GLM_tutorial_docker.ipynb. 
+
+**IMPORTANT NOTE: We found fitting FirstLevelModel in Nilearn library requires excessive memory, resulting in repeated Jupyter kernel shutdown** Adjusting --memory flag in docker run was insufficient to increase memory limit of a docker container when using the docker desktop. To do so, go to docker settings -> Resources, and increase memory limit to 16GB. To check the current docker memory limit, run 
+```shell
+docker stats
+``` 
 
 ## General Linear Model Analysis
 Useful resources:
